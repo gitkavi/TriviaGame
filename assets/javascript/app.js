@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-    var gameStarted = false;
     var answered = false;
     var intervalId;
     var userAnswer = '';
@@ -83,6 +82,11 @@ $(document).ready(function () {
 
     function start(){
         questionNumber = 0;
+        correctAnswered = 0;
+        incorrectAnswered = 0;
+        unAnswered = 0;
+        answered = false;
+
         $(".current").empty();
         $("#question").empty();
         $("#options").empty();
@@ -94,8 +98,8 @@ $(document).ready(function () {
 
     function showQuestion() {
         $("#trivia").show();
-        // $("#result").empty();
-        // $("#answer").empty();
+        $("#result").empty();
+        $("#answer").empty();
 
         $(".current").html("You are on "+(questionNumber+1)+" out of "+triviaList.length+" questions.");
         $("#question").html("<h3>" + triviaList[questionNumber].question + "</h3>");
@@ -119,14 +123,13 @@ $(document).ready(function () {
     function countdown(){
         seconds = 15;
         $(".timer").html("Time Remaining: " + seconds);
-        console.log("inside the countdown: $('.timer').html('Time Remaining:  + seconds);");
         time = setInterval(showCountdown, 1000);
+        answered = true;
     }
     
     function showCountdown(){
         seconds--;
         $(".timer").html("Time Remaining: " + seconds);
-        console.log("inside the showCountdown: $('.timer').html('Time Remaining:  + seconds);");
         if(seconds < 1){
             clearInterval(time);
             answered = false;
@@ -140,14 +143,9 @@ $(document).ready(function () {
         $(".current").empty();
         $("#question").empty();
         $("#options").empty();
-        $("#result").empty();
-        $("#answer").empty();
-
+    
         var correctAnswer = triviaList[questionNumber].answer;
-        // console.log("user Answer: "+userAnswer);
-        // console.log("correct Answer: "+ correctAnswer);
-        // console.log("answered? "+answered);
-
+    
         if((userAnswer == correctAnswer) && (answered)){
             correctAnswered++;
             $(".welcome").hide();
@@ -161,7 +159,6 @@ $(document).ready(function () {
             $("#trivia").hide();
             $("#result").text("Oops! You are wrong!")
             $("#answer").text("Correct Answer is: "+triviaList[questionNumber].options[correctAnswer]);
-            // console.log("incorrectAnswered: "+incorrectAnswered);
         }
         else{
             unAnswered++;
@@ -169,7 +166,6 @@ $(document).ready(function () {
             $("#trivia").hide();
             $("#result").text("Times Up!")
             $("#answer").text("Correct Answer is: "+triviaList[questionNumber].options[correctAnswer]);
-            // console.log("UnAnswered: "+unAnswered);
             answered = true;
         }
         if(questionNumber == (triviaList.length-1)){
@@ -189,12 +185,12 @@ $(document).ready(function () {
         $("#result").hide();
         $("#answer").hide();
 
-        $(".timer").empty();
-        $(".current").empty();
-        $("#question").empty();
-        $("#options").empty();
-        $("#result").empty();
-        $("#answer").empty();
+        // $(".timer").empty();
+        // $(".current").empty();
+        // $("#question").empty();
+        // $("#options").empty();
+        // $("#result").empty();
+        // $("#answer").empty();
 
         $("#correct").text("Correct Answers: "+ correctAnswered);
         $("#inCorrect").text("Incorrect Answers: "+incorrectAnswered);

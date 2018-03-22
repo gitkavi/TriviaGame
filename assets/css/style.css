@@ -1,12 +1,16 @@
 body{
     height:auto;
-    background-color: linen;
+    /* background-color: linen; */
+    background-image: url('../images/party-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 .container{
-    width:80%;
+    width:60%;
     margin:10% auto;
     text-align: center;
-    background-color: lightyellow;
+    background-color:transparent;
+    max-height: 50%;
 }
 .welcome{
     padding-top:30px;
@@ -15,11 +19,11 @@ body{
 .message{
     padding-bottom: 30px;
     font-family: 'Audiowide', cursive;
-    font-size:100px;
-    color: orange;
+    font-size: 7em;
+    color:greenyellow;
 }
 .button {
-    background-color: orange;
+    background-color: purple;
     border: none;
     color: white;
     padding: 20px;
@@ -50,11 +54,13 @@ body{
     padding-top:30px;
     font-family: 'Overlock', cursive;
     font-size: 30px;
+    color: purple;
 }
 .options-style{
     font-family: 'Overlock', cursive;
     font-size:30px;
     padding-bottom: 10px;
+    color:plum;
 }
 #options div{
     width:50%;
@@ -62,22 +68,53 @@ body{
     padding:10px;
 }
 #options div:hover{
-    background-color: orange;
+    background-color: purple;
+    color:white;
 
 }
 .comment{
     padding-top:30px;
     font-family: 'Overlock', cursive;
-    font-size: 30px;
-    color:yellowgreen;
+    font-size: 40px;
+    color:blue;
     padding-bottom: 30px;
+    font-weight: bolder;
+}
+#answer{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    font-size: 40px;
+    color:red;
+    padding-bottom: 30px;
+    font-weight: bolder;
 }
 .scoreBoard{
     padding-top:30px;
     padding-bottom: 30px;
 }
+#correct{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    font-size: 30px;
+    color: green;
+    font-weight: bolder;
+}
+#inCorrect{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    font-size: 30px;
+    color: red;
+    font-weight: bolder;
+}
+#unAnswered{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    font-size: 30px;
+    color: pink;
+    font-weight: bolder;
+}
 #startOver{
-    background-color: orange;
+    background-color: purple;
     border: none;
     color: white;
     padding: 20px;
@@ -85,7 +122,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 4px 2px;
+    margin: 20px 2px;
     border-radius: 5px;
     width:200px;
 }
