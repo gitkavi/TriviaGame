@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Overlock" rel="stylesheet">
+    <title>Trivia Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="welcome">
+            <div class="message">Welcome to Trivia Game!!!</div>
+            <br>
+            <div >
+                <button class="button" id="start">Start</button>
+            </div>
+        </div>
+        <div id="trivia">
+            <div class="current"></div>
+            <div class="timer"></div>
+            <div id="question" class="question-style"></div>
+            <div id="options" class="options-style"></div>
+        </div>
+        <div class="comment" id="result"></div>
+        <div class="comment" id="answer"></div>
+        <div class="scoreBoard">
+            <div class="question-style" id="correct"></div>
+            <div class="question-style" id="inCorrect"></div>
+            <div class="question-style" id="unAnswered"></div>
+            <button class="button" id="startOver">Start Over?</button>
+        </div>
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

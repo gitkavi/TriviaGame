@@ -1,0 +1,91 @@
+body{
+    height:auto;
+    background-color: linen;
+}
+.container{
+    width:80%;
+    margin:10% auto;
+    text-align: center;
+    background-color: lightyellow;
+}
+.welcome{
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.message{
+    padding-bottom: 30px;
+    font-family: 'Audiowide', cursive;
+    font-size:100px;
+    color: orange;
+}
+.button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    width:200px;
+}
+.current{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    color:green;
+    font-size: 25px;
+}
+.timer{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    color:red;
+    font-size: 25px;
+}
+#trivia{
+    padding-bottom: 20px;
+}
+.question-style{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    font-size: 30px;
+}
+.options-style{
+    font-family: 'Overlock', cursive;
+    font-size:30px;
+    padding-bottom: 10px;
+}
+#options div{
+    width:50%;
+    margin:0 auto;
+    padding:10px;
+}
+#options div:hover{
+    background-color: orange;
+
+}
+.comment{
+    padding-top:30px;
+    font-family: 'Overlock', cursive;
+    font-size: 30px;
+    color:yellowgreen;
+    padding-bottom: 30px;
+}
+.scoreBoard{
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+#startOver{
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    width:200px;
+}
