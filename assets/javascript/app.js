@@ -150,6 +150,8 @@ $(document).ready(function () {
             correctAnswered++;
             $(".welcome").hide();
             $("#trivia").hide();
+            $("#result").show();
+            $("#answer").show();
             $("#result").text("Correct! Good work! ")
             $("#answer").text("Correct Answer is: "+triviaList[questionNumber].options[correctAnswer]);
         }
@@ -157,6 +159,8 @@ $(document).ready(function () {
             incorrectAnswered++;
             $(".welcome").hide();
             $("#trivia").hide();
+            $("#result").show();
+            $("#answer").show();
             $("#result").text("Oops! You are wrong!")
             $("#answer").text("Correct Answer is: "+triviaList[questionNumber].options[correctAnswer]);
         }
@@ -164,6 +168,8 @@ $(document).ready(function () {
             unAnswered++;
             $(".welcome").hide();
             $("#trivia").hide();
+            $("#result").show();
+            $("#answer").show();
             $("#result").text("Times Up!")
             $("#answer").text("Correct Answer is: "+triviaList[questionNumber].options[correctAnswer]);
             answered = true;
@@ -185,12 +191,12 @@ $(document).ready(function () {
         $("#result").hide();
         $("#answer").hide();
 
-        // $(".timer").empty();
+        $(".timer").empty();
         // $(".current").empty();
         // $("#question").empty();
         // $("#options").empty();
-        // $("#result").empty();
-        // $("#answer").empty();
+        $("#result").empty();
+        $("#answer").empty();
 
         $("#correct").text("Correct Answers: "+ correctAnswered);
         $("#inCorrect").text("Incorrect Answers: "+incorrectAnswered);
